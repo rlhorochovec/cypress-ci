@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-describe('Adicionar novo herói', () => {
+describe('Adicionar Herói', () => {
     beforeEach(() => {
         cy.visit('https://angular-heroi.herokuapp.com/herois')
     })
 
-    it('Salvar novo herói', () => {
+    it('Salvando um novo herói', () => {
         cy.contains('Adicionar')
         cy.get('[routerlink="novo"] > .nav-link').click()
         cy.get('#nome').type('Mulher Maravilha').should('have.value', 'Mulher Maravilha')
