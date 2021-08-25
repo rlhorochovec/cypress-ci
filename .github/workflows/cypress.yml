@@ -17,3 +17,10 @@ jobs:
         with:
           # Specify Browser since container image is compile with Firefox
           browser: chrome
+          
+      - name: Deploy report page to GitHub Page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports
+
