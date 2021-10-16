@@ -46,7 +46,7 @@ it("Valida mensagem: Selecione apenas 5 evento(s) para deleção em conjunto!", 
     cy.get('.MuiAlert-message').should('have.text', 'Selecione apenas 5 evento(s) para deleção em conjunto!')
 });
 
-it.only("Deleta eventos", () => {
+it("Deleta eventos", () => {
     cy.get('.Generics__SNBox-sc-vytrfh-13:nth-child(2) > .MuiTypography-root .MuiGrid-root > .Generics__SNParagraph-sc-vytrfh-12').click();
     cy.wait(1500)
 
