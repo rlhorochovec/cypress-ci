@@ -12,6 +12,7 @@ describe('Adicionar Herói', () => {
         cy.get('#nomeCivil').type('Princesa Diana').should('have.value', 'Princesa Diana')
         cy.get('#universo').select('DC').should('have.value', 'DC')
         cy.get('.btn').click()
+        cy.wait(1500)
         cy.get('h3').should('contain', 'Novo herói adicionado!')
     })
 })
