@@ -46,7 +46,7 @@ it("Valida mensagem: Selecione apenas 5 evento(s) para deleção em conjunto!", 
     cy.get('.MuiAlert-message').should('have.text', 'Selecione apenas 5 evento(s) para deleção em conjunto!')
 });
 
-it("Deleta eventos", () => {
+it.only("Deleta eventos", () => {
     cy.get('.Generics__SNBox-sc-vytrfh-13:nth-child(2) > .MuiTypography-root .MuiGrid-root > .Generics__SNParagraph-sc-vytrfh-12').click();
     cy.wait(1500)
 
@@ -61,6 +61,6 @@ it("Deleta eventos", () => {
         cy.get('.styles__DivPartials-sc-hagasa-1:nth-child(2) .MuiButton-label').click();
         cy.wait(1500)
         cy.get('.MuiAlert-message').should('have.text', 'Eventos deletados com sucesso!')
-        cy.wait(3000)
+        cy.wait(5000)
     }
 });
