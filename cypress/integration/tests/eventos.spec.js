@@ -23,6 +23,7 @@ describe('Criar e Excluir Eventos', () => {
             var numero = Math.floor(Math.random() * 101);
 
             cy.get(loc.EVENTO.NOVO).click();
+            cy.get(loc.EVENTO.TIPO).click();
             cy.contains('Assessoria parcial').click();
             cy.get(loc.EVENTO.NOME).type('Cypress ' + nome);
             cy.get(loc.EVENTO.LOCAL).type('Rua ' + local + ', ' + numero);
