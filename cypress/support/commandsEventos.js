@@ -28,6 +28,7 @@ Cypress.Commands.add('criaEvento', (quantidade) => {
         cy.wait(1000)
     }
 })
+
 Cypress.Commands.add('deletaEvento', (ciclos, quantidade) => {
     cy.get(loc.MENU.HOME).click();
     cy.get(loc.MENU.EVENTOS).click();
