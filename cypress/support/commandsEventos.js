@@ -2,7 +2,7 @@ import loc from './locatorsEventos'
 
 Cypress.Commands.add('login', (email, senha) => {
     cy.visit("https://dev-pwa-salveanoiva.herokuapp.com/")
-    cy.get(loc.LOGIN.EMAIL).type(email)
+    cy.get(loc.LOGIN.EMAIL).type(email).should('have.value', email)
     cy.get(loc.LOGIN.SENHA).type(senha)
     cy.get(loc.LOGIN.ENTRAR).submit()
     cy.wait(1500)
@@ -22,8 +22,8 @@ Cypress.Commands.add('criaEvento', (quantidade) => {
         cy.get(loc.EVENTO.NOVO).click();
         cy.get(loc.EVENTO.TIPO).click();
         cy.contains('Assessoria parcial').click();
-        cy.get(loc.EVENTO.NOME).type('Cypress ' + nome);
-        cy.get(loc.EVENTO.LOCAL).type('Rua ' + local + ', ' + numero);
+        cy.get(loc.EVENTO.NOME).type('Cypress ' + nome).should('have.value', 'Cypress ' + nome);
+        cy.get(loc.EVENTO.LOCAL).type('Rua ' + local + ', ' + numero).should('have.value', 'Rua ' + local + ', ' + numero);
         cy.get(loc.EVENTO.CADASTRAR).submit();
         cy.wait(1000)
     }
