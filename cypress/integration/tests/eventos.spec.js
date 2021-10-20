@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-import loc from '../../support/locatorsEventos'
 import '../../support/commandsEventos'
 
 describe('Gerenciar Eventos', () => {
