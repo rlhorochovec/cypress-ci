@@ -4,12 +4,12 @@ import '../../support/commandsHerois'
 
 describe('Gerenciar Heróis', () => {
     before(() => {
-        cy.visit('https://angular-heroi.herokuapp.com/herois')
+        cy.visit('https://web-heroi.herokuapp.com')
     })
 
     it('Adicionar um novo herói', () => {
-        cy.clicaAdicionar();
-        cy.adicionaHeroi();
-        cy.validaMensagem('Novo herói adicionado!')
+        cy.clicaCriar();
+        cy.salvaHeroi();
+        cy.validaMensagem('Herói salvo com sucesso!')
     })
 })
