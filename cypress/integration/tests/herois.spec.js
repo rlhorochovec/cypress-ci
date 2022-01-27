@@ -2,14 +2,20 @@
 
 import '../../support/commandsHerois'
 
-describe('Gerenciar Heróis', () => {
-    before(() => {
+describe('web-heroi', () => {
+    beforeEach(() => {
         cy.visit('https://web-heroi.herokuapp.com')
     })
 
-    it('Adicionar um novo herói', () => {
+    it('Salvar um novo herói', () => {
         cy.clicaCriar();
         cy.salvaHeroi();
         cy.validaMensagem('Herói salvo com sucesso!')
+    })
+
+    it('Pesquisar herói', () => {
+        cy.pesquisarHeroi('Hulk')
+        cy.pesquisarHeroi('Batman')
+        cy.pesquisarHeroi('Superman')
     })
 })
