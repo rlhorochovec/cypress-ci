@@ -1,7 +1,10 @@
 const locators = {
     HEROI: {
+        MENU: {
+            HEROIS: ":nth-child(1) > .nav-link",
+            CRIAR: ":nth-child(2) > .nav-link"
+        },
         CRIAR: {
-            MENU: ":nth-child(2) > .nav-link",
             NOME: "#nome",
             CIVIL: "#nomeCivil",
             UNIVERSO: "#universo",

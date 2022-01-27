@@ -2,8 +2,16 @@ import loc from './locatorsHerois'
 
 Cypress.Commands.add('clicaCriar', () => {
     cy.contains('Criar')
-    cy.get(loc.HEROI.CRIAR.MENU).click()
+    cy.get(loc.HEROI.MENU.CRIAR).click()
+    cy.wait(1500)
 })
+
+Cypress.Commands.add('clicaHerois', () => {
+    cy.contains('Heróis')
+    cy.get(loc.HEROI.MENU.HEROIS).click()
+    cy.wait(1500)
+})
+
 Cypress.Commands.add('clicaNovo', () => {
     cy.get(loc.HEROI.CRIAR.NOVO).click()
 })
