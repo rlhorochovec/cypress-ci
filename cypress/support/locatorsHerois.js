@@ -6,12 +6,16 @@ const locators = {
             CIVIL: "#nomeCivil",
             UNIVERSO: "#universo",
             SALVAR: ".btn",
-            MENSAGEM: "h4"
+            MENSAGEM: "h4",
+            NOVO: ".btn"
         },
         PESQUISAR: {
             CAMPO: ".form-control",
             BUSCAR: ".input-group-append > .btn",
             RESULTADO: ".list-group-item"
+        },
+        EXCLUIR: {
+            TODOS: ".m-3"
         }
     }
 }
