@@ -1,11 +1,11 @@
 const locators = {
     HEROI: {
-        NOVO: "[routerlink='novo'] > .nav-link",
+        CRIAR: ":nth-child(2) > .nav-link",
         NOME: "#nome",
         CIVIL: "#nomeCivil",
         UNIVERSO: "#universo",
         SALVAR: ".btn",
-        MENSAGEM: "h3"
+        MENSAGEM: "h4"
     }
 }
 
