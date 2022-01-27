@@ -15,6 +15,7 @@ describe('web-heroi', () => {
         cy.clicaCriar();
         cy.salvaHeroi('Aquaman', 'Athur Curry', 'DC');
         cy.validaMensagem('Herói salvo com sucesso!')
+        cy.clicaHerois()
     })
 
     it('Salvar vários heróis', () => {
@@ -41,15 +42,14 @@ describe('web-heroi', () => {
         cy.clicaNovo();
         cy.salvaHeroi('Homem de Ferro', 'Tony Stark', 'Marvel');
         cy.validaMensagem('Herói salvo com sucesso!')
+
+        cy.clicaHerois()
     })
 
     it('Pesquisar herói', () => {
         cy.pesquisarHeroi('Hulk')
         cy.pesquisarHeroi('Batman')
         cy.pesquisarHeroi('Superman')
-    })
-
-    it('Volta para tela principal', () => {
         cy.clicaHerois()
     })
 })
