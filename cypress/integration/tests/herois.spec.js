@@ -8,7 +8,7 @@ describe('web-heroi', () => {
     })
 
     it('Excluir todos os heróis', () => {
-        cy.excluirTodos();
+        cy.excluiTodos();
     })
 
     it('Salvar um novo herói', () => {
@@ -25,9 +25,9 @@ describe('web-heroi', () => {
     })
 
     it('Pesquisar herói', () => {
-        cy.pesquisarHeroi('Hulk')
-        cy.pesquisarHeroi('Batman')
-        cy.pesquisarHeroi('Superman')
+        cy.pesquisaHeroi('Hulk')
+        cy.pesquisaHeroi('Batman')
+        cy.pesquisaHeroi('Superman')
         cy.clicaHerois()
     })
 })

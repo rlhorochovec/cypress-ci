@@ -40,7 +40,7 @@ Cypress.Commands.add('validaMensagem', (mensagem) => {
     cy.get(loc.HEROI.CRIAR.MENSAGEM).should('contain', mensagem)
 })
 
-Cypress.Commands.add('pesquisarHeroi', (heroi) => {
+Cypress.Commands.add('pesquisaHeroi', (heroi) => {
     cy.wait(1500)
     cy.get(loc.HEROI.PESQUISAR.CAMPO).clear().type(heroi).should('have.value', heroi)
     cy.get(loc.HEROI.PESQUISAR.BUSCAR).click()
@@ -48,7 +48,7 @@ Cypress.Commands.add('pesquisarHeroi', (heroi) => {
     cy.get(loc.HEROI.PESQUISAR.RESULTADO).contains(heroi)
 })
 
-Cypress.Commands.add('excluirTodos', (mensagem) => {
+Cypress.Commands.add('excluiTodos', (mensagem) => {
     cy.contains('Criar')
     cy.get(loc.HEROI.EXCLUIR.TODOS).click()
     cy.wait(1500)
