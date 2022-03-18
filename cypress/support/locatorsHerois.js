@@ -5,9 +5,9 @@ const locators = {
             CRIAR: ":nth-child(2) > .nav-link"
         },
         CRIAR: {
-            NOME: "#nome",
-            CIVIL: "#nomeCivil",
-            UNIVERSO: "#universo",
+            NOME: "#name",
+            CIVIL: "#civil",
+            UNIVERSO: "#universe",
             SALVAR: ".btn",
             MENSAGEM: "h4",
             NOVO: ".btn"
