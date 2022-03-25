@@ -13,7 +13,7 @@ describe('web-heroi', () => {
 
     it('Salvar um novo herói', () => {
         cy.clicaCriar();
-        cy.salvaHeroi('Aquaman', 'Athur Curry', 'DC');
+        cy.salvaHeroi('Aquaman', 'Arthur Curry', 'DC');
         cy.validaMensagem('Herói salvo com sucesso!')
         cy.clicaHerois()
     })
